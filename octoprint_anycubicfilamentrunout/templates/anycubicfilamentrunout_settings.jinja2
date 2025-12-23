@@ -1,0 +1,22 @@
+<h4>Anycubic Filament Runout <small>{{ _('Version') }} {{ plugin_anycubicfilamentrunout_plugin_version }}</small></h4>
+
+<p><strong>{{ _('Detection Message:') }}</strong></p>
+<p>
+{{ _('This plugin monitors the serial communication for a specific message that indicates filament runout.') }}
+</p>
+<p>
+{{ _('The default detection message for Anycubic printers is:') }} <code>echo:Insert filament and send M108</code>
+</p>
+<p>
+{{ _('If your printer uses a different message, you can check the Terminal tab in OctoPrint when a filament runout occurs and update the detection message below.') }}
+</p>
+
+<form class="form-horizontal" id="settings_plugin_anycubicfilamentrunout_form">
+    <div class="control-group">
+        <label class="control-label">{{ _('Detection Message') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.anycubicfilamentrunout.detection_message">
+            <span class="help-block">{{ _('The exact text that appears in the serial output when filament runs out') }}</span>
+        </div>
+    </div>
+</form>
